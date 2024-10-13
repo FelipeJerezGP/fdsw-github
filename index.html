@@ -218,15 +218,20 @@
         contactarme!
       </p>
 
-      <form>
+      <form onsubmit="mostrarAlerta()">
         <div class="form-group mb-4">
           <label class="mb-2">Nombre</label>
-          <input class="form-control" placeholder="Nombre" />
+          <input class="form-control" placeholder="Nombre" required />
         </div>
 
         <div class="form-group mb-4">
           <label class="mb-2">Correo electrónico</label>
-          <input class="form-control" placeholder="Correo electrónico" />
+          <input
+            class="form-control"
+            placeholder="Correo electrónico"
+            type="email"
+            required
+          />
         </div>
 
         <div class="form-group">
@@ -234,6 +239,8 @@
           <textarea
             class="form-control"
             placeholder="Escribe aquí tu mensaje"
+            minlength="10"
+            required
           ></textarea>
         </div>
 
@@ -252,5 +259,10 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function mostrarAlerta() {
+        alert("¡Gracias por enviar tu mensaje!");
+      }
+    </script>
   </body>
 </html>
